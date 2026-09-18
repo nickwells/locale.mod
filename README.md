@@ -1,0 +1,2 @@
+# locale.mod
+localisation information
