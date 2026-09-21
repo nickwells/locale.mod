@@ -62,11 +62,11 @@ func TestWeekdayByCountry(t *testing.T) {
 	}{
 		{
 			ID:     testhelper.MkID("no name, no country"),
-			ExpErr: testhelper.MkExpErr(`unknown country code: ""`),
+			ExpErr: testhelper.MkExpErr(`unknown language: ""`),
 		},
 		{
 			ID:          testhelper.MkID("no name, nonesuch"),
-			ExpErr:      testhelper.MkExpErr(`unknown country code: "nonesuch"`),
+			ExpErr:      testhelper.MkExpErr(`unknown language: "nonesuch"`),
 			countryName: "nonesuch",
 		},
 		{
