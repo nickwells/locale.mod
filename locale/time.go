@@ -91,7 +91,7 @@ func (l Time) ToMonth(name string) (time.Month, error) {
 func (l Time) FromWeekday(w time.Weekday) (string, error) {
 	name, ok := l.fromWeekday[w]
 	if !ok {
-		return name, fmt.Errorf("unknown day of week: %q", w)
+		return name, fmt.Errorf("unknown weekday: %s", w)
 	}
 
 	return name, nil
@@ -102,7 +102,7 @@ func (l Time) FromWeekday(w time.Weekday) (string, error) {
 func (l Time) FromMonth(m time.Month) (string, error) {
 	name, ok := l.fromMonth[m]
 	if !ok {
-		return name, fmt.Errorf("unknown month: %q", m)
+		return name, fmt.Errorf("unknown month: %s", m)
 	}
 
 	return name, nil

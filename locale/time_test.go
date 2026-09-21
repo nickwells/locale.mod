@@ -623,3 +623,61 @@ func TestMakeLocaleOrPanic(t *testing.T) {
 		})
 	}
 }
+
+func TestFromWeekday(t *testing.T) {
+	testCases := []struct {
+		testhelper.ID
+		testhelper.ExpErr
+		weekday time.Weekday
+		expName string
+	}{
+		{
+			ID:      testhelper.MkID("good weekday"),
+			weekday: time.Sunday,
+			expName: "Sunday",
+		},
+		{
+			ID:      testhelper.MkID("bad weekday"),
+			ExpErr:  testhelper.MkExpErr("unknown weekday: %!Weekday(99)"),
+			weekday: time.Weekday(99),
+			expName: "",
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.Name, func(t *testing.T) {
+			s, err := locTest1.FromWeekday(tc.weekday)
+			testhelper.CheckExpErr(t, err, tc)
+			testhelper.DiffString(t, tc.IDStr(), "weekday", s, tc.expName)
+		})
+	}
+}
+
+func TestFromMonth(t *testing.T) {
+	testCases := []struct {
+		testhelper.ID
+		testhelper.ExpErr
+		month   time.Month
+		expName string
+	}{
+		{
+			ID:      testhelper.MkID("good month"),
+			month:   time.January,
+			expName: "January",
+		},
+		{
+			ID:      testhelper.MkID("bad month"),
+			ExpErr:  testhelper.MkExpErr("unknown month: %!Month(99)"),
+			month:   time.Month(99),
+			expName: "",
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.Name, func(t *testing.T) {
+			s, err := locTest1.FromMonth(tc.month)
+			testhelper.CheckExpErr(t, err, tc)
+			testhelper.DiffString(t, tc.IDStr(), "month", s, tc.expName)
+		})
+	}
+}
