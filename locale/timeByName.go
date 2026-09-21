@@ -11,8 +11,22 @@ var namedTimes = map[string]Time{
 	"GB":      TimeEnglish, // Great Britain
 	"US":      TimeEnglish, // United States of America
 	"CA":      TimeEnglish, // Canada
+	"en-CA":   TimeEnglish, // English - Canada
 	"AU":      TimeEnglish, // Australia
 	"NZ":      TimeEnglish, // New Zealand
+	"NG":      TimeEnglish, // Nigeria
+	"SG":      TimeEnglish, // Singapore
+	"en-SG":   TimeEnglish, // English - Singapore
+	"en-PH":   TimeEnglish, // English - Philippines
+	"KE":      TimeEnglish, // Kenya
+	"UG":      TimeEnglish, // Uganda
+	"GH":      TimeEnglish, // Ghana
+	"MW":      TimeEnglish, // Malawi
+	"ZM":      TimeEnglish, // Zambia
+	"ZW":      TimeEnglish, // Zimbabwe
+	"en-SD":   TimeEnglish, // English - Sudan
+	"SS":      TimeEnglish, // South Sudan
+	"ZA":      TimeEnglish, // South Africa
 
 	"fr":       TimeFrench,
 	"French":   TimeFrench,
@@ -22,7 +36,7 @@ var namedTimes = map[string]Time{
 	"francais": TimeFrench,
 	"français": TimeFrench,
 	"FR":       TimeFrench, // France
-	"fr-CA":    TimeFrench, // French - Canadian
+	"fr-CA":    TimeFrench, // French - Canada
 	"fr-CH":    TimeFrench, // French - Switzerland
 	"HT":       TimeFrench, // Haiti
 
@@ -84,12 +98,84 @@ var namedTimes = map[string]Time{
 	"AT":      TimeGerman, // Austria
 	"DE":      TimeGerman, // Germany
 	"de-CH":   TimeGerman, // German - Switzerland
+
+	"hi":     TimeHindi,
+	"हिन्दी": TimeHindi,
+	"Hindi":  TimeHindi,
+	"hindi":  TimeHindi,
+	"IN":     TimeHindi, // India
+
+	"汉语":       TimeChinese, // simplified Chinese
+	"漢語":       TimeChinese, // traditional Chinese
+	"Hànyǔ":    TimeChinese,
+	"Hanyu":    TimeChinese,
+	"hànyǔ":    TimeChinese,
+	"hanyu":    TimeChinese,
+	"中文":       TimeChinese,
+	"Zhōngwén": TimeChinese,
+	"Zhongwen": TimeChinese,
+	"zhōngwén": TimeChinese,
+	"zhongwen": TimeChinese,
+	"zh":       TimeChinese,
+	"Chinese":  TimeChinese,
+	"chinese":  TimeChinese,
+	"CH":       TimeChinese, // People's Republic of China
+	"TW":       TimeChinese, // Republic of China (Taiwan)
+	"zh-SG":    TimeChinese, // Chinese - Singapore
+
+	"ja":       TimeJapanese,
+	"日本語":      TimeJapanese,
+	"Nihongo":  TimeJapanese,
+	"nihongo":  TimeJapanese,
+	"Japanese": TimeJapanese,
+	"japanese": TimeJapanese,
+	"JP":       TimeJapanese, // Japan
+
+	"ms":    TimeMalay,
+	"Malay": TimeMalay,
+	"malay": TimeMalay,
+	"MY":    TimeMalay, // Malaysia
+	"ID":    TimeMalay, // Indonesia
+	"ms-SG": TimeMalay, // Malay - Singapore
+
+	"ar":              TimeArabic,
+	"اَلْعَرَبِيَّةُ": TimeArabic,
+	"al-ʻArabīyah":    TimeArabic,
+	"al-ʻArabīyyah":   TimeArabic,
+	"al-Arabiyah":     TimeArabic,
+	"al-Arabiyyah":    TimeArabic,
+	"Arabic":          TimeArabic,
+	"arabic":          TimeArabic,
+	"ar-DZ":           TimeArabic, // Arabic - Algeria
+	"BH":              TimeArabic, // Bahrain
+	"ar-TD":           TimeArabic, // Arabic - Chad
+	"ar-KM":           TimeArabic, // Arabic - Comoros
+	"ar-DJ":           TimeArabic, // Arabic - Djibouti
+	"EG":              TimeArabic, // Egypt
+	"ar-IQ":           TimeArabic, // Arabic - Iraq
+	"JO":              TimeArabic, // Jordan
+	"KW":              TimeArabic, // Kuwait
+	"LB":              TimeArabic, // Lebanon
+	"LY":              TimeArabic, // Libya
+	"ar-ML":           TimeArabic, // Arabic - Mali
+	"MR":              TimeArabic, // Mauritania
+	"ar-MA":           TimeArabic, // Arabic - Morocco
+	"OM":              TimeArabic, // Oman
+	"PS":              TimeArabic, // Palestine
+	"QA":              TimeArabic, // Qatar
+	"SA":              TimeArabic, // Saudi Arabia
+	"ar-SO":           TimeArabic, // Arabic - Somalia
+	"ar-SD":           TimeArabic, // Arabic - Sudan
+	"SY":              TimeArabic, // Syria
+	"TN":              TimeArabic, // Tunisia
+	"AE":              TimeArabic, // United Arab Emirates
+	"YE":              TimeArabic, // Yemen
 }
 
 // TimeByName provides a mapping between names and the associated Time
 // conversion tables.
 //
-// Times are identified by a range of different names. The ISO 3166 code for
+// Times are identified by a range of different names. The ISO 3166-2 code for
 // a country will return the name-to-time-parts mapping for the majority
 // language in that country. Note that for some countries having multiple
 // languages the other languages can be selected by prefixing the country
