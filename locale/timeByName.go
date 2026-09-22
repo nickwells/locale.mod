@@ -59,6 +59,11 @@ var namedTimes = map[string]Time{
 	"ZA":      TimeEnglish, // South Africa
 	"en-ZA":   TimeEnglish, // South Africa
 	"en_ZA":   TimeEnglish, // South Africa
+	"en-IN":   TimeEnglish, // English - India
+	"en_IN":   TimeEnglish, // English - India
+	"IE":      TimeEnglish, // English - Ireland
+	"en-IE":   TimeEnglish, // English - Ireland
+	"en_IE":   TimeEnglish, // English - Ireland
 
 	"fr":       TimeFrench,
 	"French":   TimeFrench,
@@ -319,6 +324,18 @@ var namedTimes = map[string]Time{
 	"YE":              TimeArabic, // Yemen
 	"ar-YE":           TimeArabic, // Yemen
 	"ar_YE":           TimeArabic, // Yemen
+
+	"bn":      TimeBengali,
+	"বাংলা":   TimeBengali,
+	"Bengali": TimeBengali,
+	"bengali": TimeBengali,
+	"Bangla":  TimeBengali,
+	"bangla":  TimeBengali,
+	"BD":      TimeBengali, // Bangladesh
+	"bn-BD":   TimeBengali, // Bangladesh
+	"bn_BD":   TimeBengali, // Bangladesh
+	"bn-IN":   TimeBengali, // Bengali - India
+	"bn_IN":   TimeBengali, // Bengali - India
 }
 
 // TimeByName provides a mapping between names and the associated Time
